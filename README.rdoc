@@ -1,0 +1,7 @@
+Dice builder project
+
+Concept: Henry Hsu
+
+Prototype: Henry Hsu
+
+Work in Progress

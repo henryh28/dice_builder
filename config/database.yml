@@ -1,0 +1,11 @@
+development:
+  adapter: postgresql
+  database: dice_builder_development
+
+test:
+  adapter: postgresql
+  database: dice_builder_test
+
+production:
+  adapter: postgresql
+  database: dice_builder_production
