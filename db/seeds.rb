@@ -1,7 +1,8 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# 6 types of dice:  offense, research, worker,
+#                   gatherer, general, saboteur
+
+
+start = Player.create(name: "echo")
+start.dice_pool << Dice.new(dice_type: "gatherer", sides: 4) << Dice.new(dice_type: "worker", sides: 4)
+start.dice_pool << Dice.new(dice_type: "offense", sides: 4)
+start.save

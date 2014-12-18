@@ -11,6 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(:version => 20141216202757) do
+
+  create_table "cards", :force => true do |t|
+    t.string  "name"
+    t.string  "flavor_text", :default => "descriptive"
+    t.string  "card_type"
+    t.string  "owner"
+    t.integer "effect"
+  end
+
+  create_table "dices", :force => true do |t|
+    t.string  "dice_type"
+    t.integer "sides"
+    t.string  "owner"
+    t.boolean "used",      :default => false
+  end
+
+  create_table "players", :force => true do |t|
+    t.string  "name"
+    t.integer "command",     :default => 3
+    t.integer "hand_size",   :default => 3
+    t.boolean "player_turn", :default => true
+    t.text    "dice_pool"
+    t.text    "card_pool"
+  end
 
 end
