@@ -1,0 +1,7 @@
+display player<br>
+
+<%= @player.name %><br>
+
+<% @player.dice_pool.each do |die| %>
+  <%= die.inspect %><br>
+<% end %>
