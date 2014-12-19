@@ -1,7 +1,47 @@
-display player<br>
+Main Game Screen<br>
 
-<%= @player.name %><br>
 
-<% @player.dice_pool.each do |die| %>
-  <%= die.inspect %><br>
-<% end %>
+<fieldset>
+  <legend><%= @player.name %></legend>
+  <table>
+    <tr>
+      <th>Gatherer: </th>
+       <td><% display_dice("gatherer").each do |die| %>
+                [<%= die.sides %>]
+                <% end %></td>
+    </tr>
+    <tr>
+      <th>Researcher:</th>
+        <td><% display_dice("research").each do |die| %>
+                [<%= die.sides %>]
+                <% end %></td>
+    </tr>
+    <tr>
+      <th>Worker:</th>
+      <td><% display_dice("worker").each do |die| %>
+              [<%= die.sides %>]
+              <% end %></td>
+    </tr>
+    <tr>
+      <th>Offense:</th>
+      <td><% display_dice("offense").each do |die| %>
+              [<%= die.sides %>]
+              <% end %></td>
+    </tr>
+    <tr>
+      <th>Generalist:</th>
+      <td><% display_dice("general").each do |die| %>
+              [<%= die.sides %>]
+              <% end %></td>
+    </tr>
+    <tr>
+      <th>Saboteur:</th>
+      <td><% display_dice("sabeoteur").each do |die| %>
+              [<%= die.sides %>]
+              <% end %></td>
+    </tr>
+  </table>
+
+
+</fieldset>
+
