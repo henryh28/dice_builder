@@ -1,0 +1,39 @@
+
+<fieldset>
+  <legend>Buy starting dice (Total amount of starting dice should be 5 dice)</legend>
+
+  <%= form_for :new_player, url: game_create_path, method: :post do |player| %>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <td><%= player.text_field(:name, size: "15", value: "your name") %></td>
+    </tr>
+    <tr>
+      <th>Gatherer</th>
+      <td><%= player.number_field(:gatherer, min: 0, max: 5, value: 0) %></td>
+    </tr>
+    <tr>
+      <th>Offense</th>
+      <td><%= player.number_field(:offense, min: 0, max: 5, value: 0) %></td>
+    </tr>
+    <tr>
+      <th>Research</th>
+      <td><%= player.number_field(:research, min: 0, max: 5, value: 0) %></td>
+    </tr>
+    <tr>
+      <th>Worker</th>
+      <td><%= player.number_field(:worker, min: 0, max: 5, value: 0) %></td>
+    </tr>
+    <tr>
+      <th></th>
+      <td><%= player.submit "Start game" %></td>
+    </tr>
+
+  </table>
+
+  <% end %>
+</fieldset>
+
+
+<%= link_to "Home", root_path %>
